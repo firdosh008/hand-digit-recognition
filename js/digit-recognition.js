@@ -17,7 +17,6 @@ var clickD = new Array();
 var drawing;
 
 document.getElementById('chart_box').innerHTML = "";
-document.getElementById('chart_box').style.display = "none";
 
 //---------------
 // Create canvas
@@ -29,6 +28,8 @@ canvas.setAttribute("width", canvasWidth);
 canvas.setAttribute("height", canvasHeight);
 canvas.setAttribute("id", canvasId);
 canvas.style.backgroundColor = canvasBackgroundColor;
+canvas.style.cursor = "crosshair";
+
 canvasBox.appendChild(canvas);
 if(typeof G_vmlCanvasManager != 'undefined') {
   canvas = G_vmlCanvasManager.initElement(canvas);
